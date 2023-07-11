@@ -17,7 +17,7 @@ public:
         }
         ListNode* prev=NULL;
         ListNode* curr=head;
-        ListNode* forward=NULL;
+        ListNode* forward=head;
         int count=0;
         ListNode* cursor = head;
         for(int i = 0; i < k; i++){
