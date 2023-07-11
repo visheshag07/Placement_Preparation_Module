@@ -16,7 +16,7 @@ public:
     {
         rmax[i]=max(height[i],rmax[i+1]);
     }
-    for(int i=1;i<n-1;i++)
+    for(int i=0;i<n-1;i++)
     {
          res=res+(min(lmax[i],rmax[i])-height[i]);
     }
