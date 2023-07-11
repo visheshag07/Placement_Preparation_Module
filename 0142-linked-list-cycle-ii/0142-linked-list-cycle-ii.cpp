@@ -6,7 +6,7 @@ public:
         while(slow!=NULL and fast!=NULL){
             slow=slow->next;
             fast=fast->next;
-            if(fast)fast=fast->next;
+            if(fast!=NULL)fast=fast->next;
             if(slow==fast)break;
         }
         if(!slow or !fast)return NULL;
