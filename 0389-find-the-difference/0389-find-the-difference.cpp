@@ -1,18 +1,18 @@
 class Solution {
 public:
     char findTheDifference(string s, string t) {
-        sort(s.begin(),s.end());
-        sort(t.begin(),t.end());
-        char ans;
-        for(int i=0;i<t.length();i++)
+        vector<int>vt(26);
+        for(auto ch:t)
         {
-            if(s[i]!=t[i])
-            {
-                ans=t[i];
-            break;
+            vt[ch-'a']++;
         }
-        }
-        return ans;
+        for(auto ch:s)
+        vt[ch-'a']--;
+
+        for(int i=0;i<26;i++)
+        if(vt[i]!=0)
+        return (char)(i+'a');
+
+        return '*';
     }
-    
 };
