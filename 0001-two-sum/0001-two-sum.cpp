@@ -5,13 +5,12 @@ public:
         for(int i=0;i<nums.size();i++)
         {
             int num=nums[i];
-            int value=target-num;
-            if(mpp.find(value)!=mpp.end())
+            int final_target=target-num;
+            if(mpp.find(final_target)!=mpp.end())
             {
-              return   {mpp[value],i};
+                return {i,mpp[final_target]};
             }
-           //mpp[num]=i;
-           mpp.insert({num,i});
+            mpp.insert({num,i});
         }
         return {-1,-1};
     }
