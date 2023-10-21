@@ -10,7 +10,7 @@ public:
              if(abs(i-mp[nums[i]])<=k)
              return true;
          }
-       //  mp.insert({nums[i],i});
+      //   mp.insert({nums[i],i});
          mp[nums[i]] = i;
      }
      return false;
